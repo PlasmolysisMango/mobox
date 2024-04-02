@@ -20,17 +20,29 @@ echo "Installing termux packages"
 apt-get clean
 apt-get update >/dev/null 2>&1
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
+echo "Install x11-repo"
 pkg install x11-repo -y &>/dev/null
+echo "Install pulseaudio"
 pkg install pulseaudio -y &>/dev/null
+echo "Install xwayland"
 pkg install xwayland -y &>/dev/null
+echo "Install wget"
 pkg install wget -y &>/dev/null
+echo "Install tsu"
 pkg install tsu -y &>/dev/null
+echo "Install root-repo"
 pkg install root-repo -y &>/dev/null
+echo "Install patchelf"
 pkg install patchelf -y &>/dev/null
+echo "Install p7zip"
 pkg install p7zip -y &>/dev/null
+echo "Install xorg-xrandr"
 pkg install xorg-xrandr -y &>/dev/null
+echo "Install ncurses-utils"
 pkg install ncurses-utils -y &>/dev/null
+echo "Install hashdeep"
 pkg install hashdeep -y &>/dev/null
+echo "Install termux-x11-nightly"
 pkg install termux-x11-nightly -y &>/dev/null
 
 if [ -e $PREFIX/glibc ]; then
